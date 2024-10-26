@@ -1,0 +1,13 @@
+Feature: Ver menús detallados
+Como usuario vegano, quiero ver menús detallados de los restaurantes, para verificar que tienen opciones adecuadas.
+
+    Scenario Outline: El usuario busca menús detallados de restaurantes.
+        Given el usuario ha seleccionado un restaurante en la aplicación
+        When el usuario elige ver el menú completo del restaurante
+        Then la aplicación muestra un menú detallado incluyendo precios y opciones veganas.
+
+        Examples: Menús detallados
+            | restaurante        | precio promedio | opciones veganas |
+            | Vegano Delicias    | 20 soles        | 5                |
+            | Green Life         | 30 soles        | 8                |
+            | Natural Kitchen    | 25 soles        | 6                |

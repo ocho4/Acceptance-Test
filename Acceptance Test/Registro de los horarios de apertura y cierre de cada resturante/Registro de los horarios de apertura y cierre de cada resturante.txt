@@ -1,0 +1,13 @@
+Feature: Ver horarios de apertura y cierre
+Como usuario vegano, quiero ver los horarios de apertura y cierre de los restaurantes, para asegurarme de que estarán abiertos cuando los necesite.
+
+    Scenario Outline: El usuario verifica los horarios de apertura y cierre de los restaurantes.
+        Given que el usuario ha seleccionado un restaurante en la aplicación
+        When el usuario consulta los horarios de operación
+        Then la aplicación muestra los horarios de apertura y cierre actualizados.
+
+        Examples: Horarios de apertura y cierre
+            | restaurante      | apertura | cierre |
+            | Green Life       | 8:00 AM  | 10:00 PM |
+            | Veggie Lounge    | 9:00 AM  | 11:00 PM |
+            | Eco Café         | 7:30 AM  | 9:00 PM  |

@@ -1,0 +1,13 @@
+Feature: Registro e inicio de sesión
+Como usuario nuevo, quiero poder registrarme e iniciar sesión en la aplicación, para acceder a todas las funcionalidades personalizadas.
+
+    Scenario Outline: El usuario se registra o inicia sesión en la aplicación.
+        Given el usuario está en la pantalla de bienvenida
+        When el usuario selecciona la opción "<acción>" 
+        And ingresa su "<correo>" y "<contraseña>"
+        Then la aplicación <resultado>
+
+        Examples: Registro e inicio de sesión
+            | acción          | correo              | contraseña | resultado                               |
+            | Registrarse     | usuario@ejemplo.com | ******     | confirma la creación de la cuenta       |
+            | Iniciar sesión  | usuario@ejemplo.com | ******     | permite el acceso a la cuenta existente |

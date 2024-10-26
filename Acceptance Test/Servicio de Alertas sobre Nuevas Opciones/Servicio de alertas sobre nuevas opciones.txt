@@ -1,0 +1,13 @@
+Feature: Recibir alertas sobre nuevas opciones
+Como usuario vegetariano, quiero recibir alertas sobre nuevas opciones veganas cerca de mí, para estar al día con nuevas alternativas.
+
+    Scenario Outline: El usuario desea recibir alertas sobre nuevas opciones veganas.
+        Given el usuario ha activado las notificaciones en la aplicación
+        When se añade un nuevo restaurante vegano cercano
+        Then el usuario recibirá una alerta con la información del nuevo restaurante.
+
+        Examples: Nuevas opciones veganas
+            | restaurante         | distancia | fecha de apertura |
+            | Vegan Oasis         | 2.0 km    | 10-Oct-2024       |
+            | Green Haven         | 4.1 km    | 20-Oct-2024       |
+            | Pure Vegan Café     | 3.6 km    | 15-Oct-2024       |

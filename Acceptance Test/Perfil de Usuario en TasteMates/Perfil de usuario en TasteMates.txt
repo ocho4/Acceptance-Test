@@ -1,0 +1,13 @@
+Feature: Ver perfil de usuario
+Como usuario de la aplicación, quiero poder ver mi perfil con mi imagen, nombre, correo electrónico y una descripción personal, para asegurarme de que mi información esté actualizada y completa.
+
+    Scenario Outline: El usuario accede a su perfil.
+        Given que el usuario ha iniciado sesión en la aplicación
+        When el usuario selecciona la opción "Ver perfil"
+        Then la aplicación muestra el perfil del usuario con su imagen, nombre, y correo electrónico.
+
+        Examples: Perfil del usuario
+            | nombre              | correo               |
+            | Carlos Vegano       | carlos@vegan.com     |
+            | Laura Healthy       | laura@healthy.com    |
+            | Juan Green          | juan@green.com       |
